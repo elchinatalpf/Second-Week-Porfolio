@@ -1,0 +1,89 @@
+    /* possible colors to be used
+    #f39f5a; #1d1a39, #451952, #662549, #ae445a, #e8bcb9 */
+
+* {
+    background-color: #e6e5d9; /*Satin Linen color*/
+    box-sizing: border-box;
+    width: 100%;
+    border: solid #bfcc0e 1px;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0.5%;
+}
+
+header {
+    border: 2px solid rgb(68, 207, 200)
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav a {
+    color: #13293d;
+    padding: 20px 20px;
+    text-decoration: none;
+    text-align: center;
+    flex: 1;
+}
+
+.container {
+    display: flex;
+    
+}
+
+aside {
+    flex: 1;
+    justify-content: flex-start;
+    background-color: #5B6DCD;
+    padding: 10px;
+    text-align: center;
+}
+
+.aside-header {
+    border: 2px solid red;
+    flex: 0 1 200px;
+}
+
+.headshot {
+    width: 100px;
+    height: 100px;
+}
+
+.projects {
+    flex: 3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5px;
+}
+
+.card {
+    flex: 0 1 200px;
+    margin: 10px;
+}
+
+.img-placehold {
+    width: 200px;
+    height: 200px;
+}
+
+@media screen and (max-width: 768px) {
+    main,
+    nav {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    nav a {
+        padding: 10px;
+    }
+
+    aside {
+        order: 2;
+      }         
+}
+
