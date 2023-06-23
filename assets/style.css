@@ -65,6 +65,7 @@ aside {
     flex: 0 0 200px;
     margin: 10px;
     border-style: solid;
+    border-color: #f39f5a;
 }
 
 .card header {
