@@ -3,79 +3,106 @@
 
 * {
     background-color: #e6e5d9; /*Satin Linen color*/
-    box-sizing: border-box;
-    width: 100%;
-    border: solid #bfcc0e 1px;
 }
 
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin: 0.5%;
+    
 }
 
-header {
-    border: 2px solid rgb(68, 207, 200)
+.main-header, h1 {
+    background-color: #f39f5a; /*Light warm shade of orange*/
 }
 
 nav {
     display: flex;
-    justify-content: flex-end;
+    justify-content: end;
+    margin-top: 10px;
 }
 
 nav a {
     color: #13293d;
     padding: 20px 20px;
     text-decoration: none;
-    text-align: center;
-    flex: 1;
 }
 
 .container {
-    display: flex;
-    
+    display: flex;    
 }
 
 aside {
-    flex: 1;
+    flex: 0 1 200px;
     justify-content: flex-start;
     background-color: #5B6DCD;
     padding: 10px;
+    align-items: flex-start;
     text-align: center;
 }
 
 .aside-header {
-    border: 2px solid red;
-    flex: 0 1 200px;
+    border: 2px solid black;
 }
 
 .headshot {
     width: 100px;
     height: 100px;
+    margin-top: 10px;
+    margin-right: 10px;
 }
 
 .projects {
-    flex: 3;
+    
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     padding: 5px;
+    background-color: #451952;
+    transition: all ease-in-out;
 }
 
 .card {
-    flex: 0 1 200px;
+    flex: 0 0 200px;
     margin: 10px;
+    border-style: solid;
+    border-color: #f39f5a;
+}
+
+.card header {
+    align-items: center;
 }
 
 .img-placehold {
     width: 200px;
     height: 200px;
+    flex-wrap: 0 1 200px;
+}
+
+.card:hover {
+    background-color: #1ba88a;
+    border-color: #8ac4ff;
+}
+
+.card:active {
+    font-size: 180%;
+    box-shadow: 0 0 10px #000 inset;
+}
+
+.card:focus {
+    outline: none;
+    border-color: #5B6DCD;
+}
+
+footer {
+   text-align: center;
+   border-radius: #345334;
 }
 
 @media screen and (max-width: 768px) {
     main,
     nav {
       flex-direction: column;
-      align-items: flex-end;
+      align-items: space-between;
     }
 
     nav a {
