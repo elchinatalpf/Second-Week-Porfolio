@@ -10,24 +10,26 @@ body {
     
 }
 
-.main-header, h1 {
-    background-color: #f39f5a; /*Light warm shade of orange*/
-}
-
-nav {
+header {
     display: flex;
-    justify-content: end;
-    margin-top: 10px;
+    justify-content: space-between;
+    background-color: #431381;
+    color: #13b189;
+    margin: 2% 1%;
 }
 
-nav a {
-    color: #13293d;
-    padding: 20px 20px;
-    text-decoration: none;
+header, h1 {
+    background-color: #431381;
+}
+
+ header ul li {
+    justify-content:space-around;
+        margin-right: 1%;
 }
 
 .container {
-    display: flex;    
+    display: flex;
+    content: linear-gradient(0%, 100%);
 }
 
 aside {
@@ -47,7 +49,7 @@ aside {
     width: 100px;
     height: 100px;
     margin-top: 10px;
-    margin-right: 10px;
+    margin-right: 10px; 
 }
 
 .projects {
@@ -62,8 +64,11 @@ aside {
 }
 
 .card {
-    flex: 0 0 200px;
+    width: 200px;
+    height: 220px;
+    flex: 0 2 200px;
     margin: 10px;
+    padding: 5px;
     border-style: solid;
     border-color: #f39f5a;
 }
@@ -94,8 +99,11 @@ aside {
 }
 
 footer {
-   text-align: center;
-   border-radius: #345334;
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+  background-color: #431381;
+  color: #1ba88a;
 }
 
 @media screen and (max-width: 768px) {
