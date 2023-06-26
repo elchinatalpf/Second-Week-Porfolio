@@ -2,10 +2,15 @@
     #f39f5a; #1d1a39, #451952, #662549, #ae445a, #e8bcb9 */
 
 * {
+    
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
     background-color: #e6e5d9; /*Satin Linen color*/
 }
 
 body {
+    display: block;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;    
 }
 
@@ -20,80 +25,109 @@ header, h1 {
     background-color: #431381;
 }
 
-header ul {
+header ul li {
     background-color: #431381;
+    justify-content: flex-end;
 }
 
- header ul li {
-    justify-content:space-around;
-        margin-right: 1%;
+a {
+    background-color: #431381;
+    color: #13b189;
 }
 
 .container {
     display: flex;
-    content: linear-gradient(0%, 100%);
 }
 
 aside {
     flex: 0 1 200px;
     justify-content: flex-start;
-    background-color: #5B6DCD;
+    background-color: rgb(91, 108, 205);
     padding: 10px;
     align-items: flex-start;
     text-align: center;
 }
 
 .aside-header {
-    border: 8px solid black;
+    border: 3px solid black;
     color: #f39f5a;
+    border-radius: 7%;
     justify-content: center;
 }
 
 aside p {
-    border-radius: 8%;
-    background-image: ;
+    background-color: rgb(91, 108, 205);
+}
+
+#how-to-contact {
+    background-color: #06336e;
+    color: #f39f5a;
+}
+
+ul.contact-section li a {
+    background-color: #154c94;
+}
+
+aside.contact-section li {
+    align-items: baseline;
 }
 
 .headshot {
     width: 150px;
     height: 130px;
     margin-top: 10px;
-    margin-right: 10px; 
+    margin-right: 10px;
+    border-radius: 10%;
 }
 
 .projects {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     padding: 5px;
     background-color: #451952;
-    transition: all ease-in-out;
+    
 }
 
 .card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     width: 200px;
     height: 220px;
-    flex: 0 2 200px;
+    flex: 0 1 200px;
     margin: 10px;
-    padding: 5px;
+    border: 1px solid #dadada;
     border-style: solid;
-    border-color: #f39f5a;
+    background-color: #154c94;
+    transition: all ease-in-out;
+    transition-duration: 0.5s;
 }
 
-.card header {
-    align-items: center;
-}
-
-.img-placehold {
+.images {
     width: 200px;
     height: 200px;
-    flex-wrap: 0 1 200px;
+    clip-path: polygon(0 0, 100% 0, 100% 42%, 0 23%);
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #451952;
+}
+
+.card-one-text {
+    position: relative;
+    top: -60px;
+    margin-top: auto;
 }
 
 .card:hover {
     background-color: #1ba88a;
-    border-color: #8ac4ff;
+    border-color: #031425;
+    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .card:active {
@@ -106,6 +140,14 @@ aside p {
     border-color: #5B6DCD;
 }
 
+.contact-section {
+    flex-wrap: nowrap;
+}
+
+.contact-section li {
+    background-color: #154c94;    
+}
+
 footer {
   display: flex;
   justify-content: center;
@@ -115,14 +157,9 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-    main,
-    nav {
+    main {
       flex-direction: column;
       align-items: space-between;
-    }
-
-    nav a {
-        padding: 10px;
     }
 
     aside {
