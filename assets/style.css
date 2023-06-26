@@ -4,7 +4,7 @@
     --text-color: #13b189;
     --aside-bg: rgb(91, 108, 205);
     --orange-color: #f39f5a;
-    --htcm-color: #5e0c5e; /*This is the "How to contact me" under the aside section*/
+    --htcm-color: #5e0c5e; /*This is the "How to contact me" section under the aside section*/
     --links-color: #154c94;
     --hover-color: #1ba88a;
 }
@@ -164,6 +164,16 @@ footer {
   color: var(--orange-color);
 }
 
+@media screen and (max-width: 992px)  {
+    main {
+        flex-direction: column;
+        align-items:stretch;
+      }
+      aside {
+        order: 3;
+      }
+}
+
 @media screen and (max-width: 768px) {
     main {
       flex-direction: column;
@@ -174,4 +184,15 @@ footer {
         order: 2;
       }         
 }
+
+@media screen and (max-width: 576px)  {
+    main {
+        flex-direction: column;
+        align-items: space-between;
+      }
+      aside {
+        order: 1;
+      }
+}
+
 
