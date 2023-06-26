@@ -106,8 +106,7 @@ aside.contact-section li {
     border: 1px solid #dadada;
     border-style: solid;
     background-color: var(--links-color);
-    transition: all ease-in-out;
-    transition-duration: 0.5s;
+    transition: transform 0.4s ease-in-out;
 }
 
 .images {
@@ -133,19 +132,23 @@ aside.contact-section li {
 }
 
 .card:hover {
+    transform: scale(1.1);
     background-color: var(--hover-color);
     border-color: #031425;
     box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .card:active {
-
+    transform: scale(1.1) translate(10px);
     box-shadow: 0 0 10px #000 inset;
+    background-color: var(--ui-bg);
 }
 
 .card:focus {
     outline: none;
     border-color: var(--aside-bg);
+    transform:perspective(1.1) scale(1.1);
+    z-index: 2;
 }
 
 .contact-section {
