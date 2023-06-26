@@ -1,12 +1,19 @@
-    /* possible colors to be used
-    #f39f5a; #1d1a39, #451952, #662549, #ae445a, #e8bcb9 */
+:root {
+    --ui-bg: #e6e5d9;
+    --bg-color: #431381;
+    --text-color: #13b189;
+    --aside-bg: rgb(91, 108, 205);
+    --orange-color: #f39f5a;
+    --htcm-color: #5e0c5e; /*This is the "How to contact me" under the aside section*/
+    --links-color: #154c94;
+    --hover-color: #1ba88a;
+}
 
 * {
-    
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    background-color: #e6e5d9; /*Satin Linen color*/
+    background-color: var(--ui-bg);
 }
 
 body {
@@ -17,22 +24,22 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    color: #13b189;
-    margin: 2% 1%;
+    color: var(--text-color);
+    margin: 0.5% 0.5%;
 }
 
 header, h1 {
-    background-color: #431381;
+    background-color: var(--bg-color);
 }
 
 header ul li {
-    background-color: #431381;
+    background-color: var(--bg-color);
     justify-content: flex-end;
 }
 
 a {
-    background-color: #431381;
-    color: #13b189;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 .container {
@@ -42,7 +49,7 @@ a {
 aside {
     flex: 0 1 200px;
     justify-content: flex-start;
-    background-color: rgb(91, 108, 205);
+    background-color: var(--aside-bg);
     padding: 10px;
     align-items: flex-start;
     text-align: center;
@@ -50,22 +57,22 @@ aside {
 
 .aside-header {
     border: 3px solid black;
-    color: #f39f5a;
+    color: var(--orange-color);
     border-radius: 7%;
     justify-content: center;
 }
 
 aside p {
-    background-color: rgb(91, 108, 205);
+    background-color: var(--aside-bg);
 }
 
 #how-to-contact {
-    background-color: #06336e;
-    color: #f39f5a;
+    background-color: var(--htcm-color);
+    color: var(--orange-color);
 }
 
 ul.contact-section li a {
-    background-color: #154c94;
+    background-color: var(--links-color);
 }
 
 aside.contact-section li {
@@ -85,8 +92,7 @@ aside.contact-section li {
     flex-wrap: wrap;
     justify-content: center;
     padding: 5px;
-    background-color: #451952;
-    
+    background-color: var(--bg-color);
 }
 
 .card {
@@ -99,7 +105,7 @@ aside.contact-section li {
     margin: 10px;
     border: 1px solid #dadada;
     border-style: solid;
-    background-color: #154c94;
+    background-color: var(--links-color);
     transition: all ease-in-out;
     transition-duration: 0.5s;
 }
@@ -107,7 +113,8 @@ aside.contact-section li {
 .images {
     width: 200px;
     height: 200px;
-    clip-path: polygon(0 0, 100% 0, 100% 42%, 0 23%);
+    opacity: 0.9;
+    clip-path: polygon(0 0, 100% 0, 100% 42%, 0 80%);
 }
 
 .card-content {
@@ -115,7 +122,8 @@ aside.contact-section li {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    background-color: #451952;
+    background-color: var(--bg-color);
+    opacity: 0.5;
 }
 
 .card-one-text {
@@ -125,19 +133,19 @@ aside.contact-section li {
 }
 
 .card:hover {
-    background-color: #1ba88a;
+    background-color: var(--hover-color);
     border-color: #031425;
     box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .card:active {
-    font-size: 180%;
+
     box-shadow: 0 0 10px #000 inset;
 }
 
 .card:focus {
     outline: none;
-    border-color: #5B6DCD;
+    border-color: var(--aside-bg);
 }
 
 .contact-section {
@@ -145,15 +153,15 @@ aside.contact-section li {
 }
 
 .contact-section li {
-    background-color: #154c94;    
+    background-color: var(--links-color);
 }
 
 footer {
   display: flex;
   justify-content: center;
   padding: 2%;
-  background-color: #431381;
-  color: #1ba88a;
+  background-color: var(--bg-color);
+  color: var(--orange-color);
 }
 
 @media screen and (max-width: 768px) {
