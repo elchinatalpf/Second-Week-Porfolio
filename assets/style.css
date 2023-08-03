@@ -44,6 +44,7 @@ a {
 
 .container {
     display: flex;
+    background-color: var(--bg-color);
 }
 
 aside {
@@ -199,3 +200,11 @@ footer {
 }
 
 
+/* There are a few things I want to point
+out where you lost points. First, your
+about section seems to have move below your
+projects in mobile view. Second, while we
+understand most of the projects are placeholders,
+we do want to see at least one project being
+linked a deployed site. Also be sure to have the
+first image larger than the rest. */
